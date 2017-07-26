@@ -77,9 +77,13 @@ body {
 }
 .infowindow{
     overflow-y: scroll;
-    height: 500px;
+    min-height: 200px;
+    max-height: calc(100vh - 200px);
 }
-
+.modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
 
 /*.ol-touch .rotate-north {*/
     /*top: 80px;*/
