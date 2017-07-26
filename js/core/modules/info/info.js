@@ -2,7 +2,7 @@
  * Created by taskaris on 2017-07-17.
  */
 
-map.on('singleclick', function (evt) {
+var callbacksimpleclickmouseinfo = function simpleclickmouseinfo (evt) {
 
     waitingDialog.show();
 
@@ -123,4 +123,6 @@ map.on('singleclick', function (evt) {
         }
     });
 
-});
+};
+
+map.on('singleclick',callbacksimpleclickmouseinfo);
