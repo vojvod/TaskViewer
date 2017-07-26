@@ -158,6 +158,8 @@ function init_measure() {
 
 function measure_distance_area(obj){
 
+    map.un('singleclick',callbacksimpleclickmouseinfo);
+
     var type = (obj.data == 'area' ? 'Polygon' : 'LineString');
     measuredistancearea_draw = new ol.interaction.Draw({
         source: measuredistancearea_source,
@@ -229,6 +231,8 @@ function measure_distance_area(obj){
             map.un('pointermove', measuredistancearea_pointerMoveHandler);
             map.removeOverlay(measuredistancearea_helpTooltip);
             map.removeOverlay(measuredistancearea_measureTooltip);
+
+            map.on('singleclick',callbacksimpleclickmouseinfo);
 
         }, this);
 
